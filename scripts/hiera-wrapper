@@ -3,15 +3,7 @@
 hiera-wrapper - query hiera based on role/environment
 """
 
-#########################################################################
-### Declarations ########################################################
-#########################################################################
-
 import optparse, os, sys
-
-#########################################################################
-### Configuration #######################################################
-#########################################################################
 
 hiera = '/usr/bin/hiera'
 
@@ -46,6 +38,8 @@ def main() :
         help='output as an array? (default: %default)')
     p.add_option('--hash', dest='hash', action='store_true', 
         help='output as a hash? (default: %default)')
+    p.add_option('--debug', dest='debug', action='store_true',
+        help='set to print debugging information')
     p.add_option('--debug', dest='debug', action='store_true',
         help='set to print debugging information')
 
